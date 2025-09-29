@@ -33,7 +33,7 @@ export const TitleSection : React.FC<TitleSectionProps> = ({ lastUpdated }) => {
                 onClick={() => toggleTheme()}
                 className="border px-3 py-1 rounded-full"
             >
-                {theme === "light" ? "Dark Mode" : "Light Mode"}
+                {theme === "light" ? "Dunkler Modus" : "Heller Modus"}
             </button>
             </div>
         </section>

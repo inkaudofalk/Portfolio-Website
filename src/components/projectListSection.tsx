@@ -48,11 +48,13 @@ export const ProjectListSection: React.FC<ProjectListSectionProps> = ({ projects
                                     {project.description || repoData.description}
                                 </p>
                                 {(project.details || repoData.details) && 
-                                    <MinimizedText buttonHint="Details" className="mb-6 leading-relaxed opacity-50">
+                                    <div className="mb-6 ">
+                                    <MinimizedText buttonHint="Details" className="leading-relaxed opacity-50">
                                         {project.details || repoData.details}
                                         <br />
                                         <br />
                                     </MinimizedText>
+                                    </div>
                                 }
 
                                 <div className="flex gap-4">

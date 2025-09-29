@@ -15,7 +15,7 @@ export const MinimizedText : React.FC<MinimizedTextProps> = ({ children, classNa
     const id = useId();
 
     return (
-        <div className={className}>
+        <span className={className}>
             <AnimatePresence initial={false}>
                 {noticeVisible && (
                     <motion.span
@@ -37,6 +37,6 @@ export const MinimizedText : React.FC<MinimizedTextProps> = ({ children, classNa
             >
               {(buttonHint ? buttonHint + " " : "") + (noticeVisible ? " verbergen <-" : "anzeigen <-")}
             </button>
-        </div>
+        </span>
     )
 };
