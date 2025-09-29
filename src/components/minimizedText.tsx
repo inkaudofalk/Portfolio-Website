@@ -6,14 +6,16 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface MinimizedTextProps {
     children: ReactNode
+    className?: string
+    buttonHint?: string
 }
 
-export const MinimizedText : React.FC<MinimizedTextProps> = ({ children }) => {
+export const MinimizedText : React.FC<MinimizedTextProps> = ({ children, className, buttonHint }) => {
     const [ noticeVisible, setNoticeVisible ] = useState(false);
     const id = useId();
 
     return (
-        <>
+        <div className={className}>
             <AnimatePresence initial={false}>
                 {noticeVisible && (
                     <motion.span
@@ -22,7 +24,7 @@ export const MinimizedText : React.FC<MinimizedTextProps> = ({ children }) => {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.35, ease: "easeInOut" }}
-                        className="overflow-hidden block"
+                        className={`overflow-hidden block`}
                     >
                         {children}
                     </motion.span>
@@ -31,10 +33,10 @@ export const MinimizedText : React.FC<MinimizedTextProps> = ({ children }) => {
 
             <button
               onClick={() => setNoticeVisible((v) => !v)}
-              className="underline font-light cursor-pointer"
+              className="font-light cursor-pointer"
             >
-              {noticeVisible ? "verbergen" : "anzeigen"}
+              {(buttonHint ? buttonHint + " " : "") + (noticeVisible ? " verbergen <-" : "anzeigen <-")}
             </button>
-        </>
+        </div>
     )
 };
