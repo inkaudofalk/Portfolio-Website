@@ -1,0 +1,10 @@
+[
+    {
+      "source": "https://github.com/inkaudofalk/Trigraphic-GameEngineV1",
+      "image": "https://repository-images.githubusercontent.com/845072531/3bc3a97f-7d4c-4cbc-b61a-fb4ca234c8d4",
+      "details": "Gebaut als Konsolen-App. Fenster und Low-Level Grafik-Bibliothek über OpenTk (OpenGL4 Wrapper für C#), Bildimport über StbImageSharp und Import von Schriftaren über StbTrueTypeSharp. Nativer Import von 3D-Meshes über eigenes Dateiformat."
+    },
+    {
+        "source": "https://github.com/inkaudofalk/LORENZCRAFT"
+    }
+]

@@ -2,21 +2,17 @@ import { Github } from "lucide-react";
 import { btn_outlined, btn_primary } from "../styles/tailwind-patterns";
 import { MinimizedText } from "./minimizedText";
 import { dateParser } from "../utility/dateParser";
-import { useGithubRepos } from "../hooks/useGithubRepos";
-import type { Project } from "../types/Project";
+import type { Project } from "../types/project";
 
 interface ProjectListSectionProps {
     projects: Project[];
 }
 
 export const ProjectListSection: React.FC<ProjectListSectionProps> = ({ projects }) => {
-    const reposData = useGithubRepos(projects);
-
     return (
         <section className="max-w-6xl mx-auto py-20 px-6">
             <div className="grid gap-12">
                 {projects.map((project, idx) => {
-                    const repoData = project.source ? reposData[project.source] || {} : {};
                     return (
                         <div
                             key={idx}
@@ -25,8 +21,8 @@ export const ProjectListSection: React.FC<ProjectListSectionProps> = ({ projects
                             overflow-hidden"
                         >
                             <img
-                                src={project.image || repoData.image}
-                                alt={project.title || repoData.title}
+                                src={project.image}
+                                alt={project.title}
                                 className="w-full"
                             />
 
@@ -34,23 +30,23 @@ export const ProjectListSection: React.FC<ProjectListSectionProps> = ({ projects
 
                                 <div className="flex items-center flex-wrap">
                                     <h3 className="text-2xl font-semibold">
-                                        {project.title || repoData.title}
+                                        {project.title || "title:N/A"}
                                     </h3>
                                     <span className="ml-3 font-normal text-sm opacity-50">
-                                        {(project.languages || repoData.languages)?.map((l) => `${l.name} (${l.percentage})`).join(", ") || "N/A"}
+                                        {project.languages?.map((l) => `${l.name} (${l.percentage})`).join(", ") || "languages:N/A"}
                                     </span>
                                     <span className="ml-auto font-light text-ms opacity-50">
-                                        {dateParser.cleanUpString(project.date || repoData.date || "N/A")}
+                                        {dateParser.cleanUpString(project.date || "date:N/A")}
                                     </span>
                                 </div>
                                 
                                 <p className="leading-relaxed opacity-70">
-                                    {project.description || repoData.description}
+                                    {project.description || "No description available."}
                                 </p>
-                                {(project.details || repoData.details) && 
+                                {project.details && 
                                     <div className="mb-6 ">
                                     <MinimizedText buttonHint="Details" className="leading-relaxed opacity-50">
-                                        {project.details || repoData.details}
+                                        {project.details}
                                         <br />
                                         <br />
                                     </MinimizedText>
@@ -59,12 +55,12 @@ export const ProjectListSection: React.FC<ProjectListSectionProps> = ({ projects
 
                                 <div className="flex gap-4">
                                     {project.preview &&
-                                        <a href={project.preview} target="_blank" className={btn_primary}>
+                                        <a href={project.preview} target="_blank" rel="noopener noreferrer" className={btn_primary}>
                                             Web Preview
                                         </a>
                                     }
                                     {project.source &&
-                                        <a href={project.source} target="_blank" className={btn_outlined}>
+                                        <a href={project.source} target="_blank" rel="noopener noreferrer" className={btn_outlined}>
                                             <Github size={16} /> Source Code
                                         </a>
                                     }

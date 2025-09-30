@@ -1,32 +1,13 @@
 import { ArticleSection, MinimizedText, TitleSection, ProjectListSection } from "../components";
 import { FooterSection } from "../components/footerSection";
-import type { Project } from "../types/Project";
+import type { Project } from "../types/project";
+import projectsJson from "../data/projects.json";
+
 
 const Portfolio = () => {
-  
-  const projects: Project[] = [
-    {
-      source: "https://github.com/inkaudofalk/Trigraphic-GameEngineV1",
-      image: "https://repository-images.githubusercontent.com/845072531/3bc3a97f-7d4c-4cbc-b61a-fb4ca234c8d4",
-      title: undefined,
-      description: undefined,
-      details: "Gebaut als Konsolen-App. Fenster und Low-Level Grafik-Bibliothek über OpenTk (OpenGL4 Wrapper für C#), Bildimport über StbImageSharp und Import von Schriftaren über StbTrueTypeSharp. Nativer Import von 3D-Meshes über eigenes Dateiformat.",
-      languages: undefined,
-      date: undefined,
-      preview: undefined,
-    },
-    {
-      source: undefined,
-      image: undefined,
-      title: undefined,
-      description: undefined,
-      details: undefined,
-      languages: undefined,
-      date: undefined,
-      preview: undefined,
-    },
-  ];
 
+  const projects: Project[] = projectsJson;
+  
   return (
     <div className="dark:bg-black dark:text-white bg-white text-black transition-colors">
       

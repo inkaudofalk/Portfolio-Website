@@ -1,0 +1,32 @@
+[
+    {
+        "source": "https://github.com/inkaudofalk/Trigraphic-GameEngineV1",
+        "image": "https://repository-images.githubusercontent.com/845072531/3bc3a97f-7d4c-4cbc-b61a-fb4ca234c8d4",
+        "details": "Gebaut als Konsolen-App. Fenster und Low-Level Grafik-Bibliothek über OpenTk (OpenGL4 Wrapper für C#), Bildimport über StbImageSharp und Import von Schriftaren über StbTrueTypeSharp. Nativer Import von 3D-Meshes über eigenes Dateiformat.",
+        "title": "Trigraphic-GameEngineV1",
+        "description": "Objekt-Komponenten-orientierte Grafik-Engine Ausgelegt auf das erstellen von spielbaren 3D Welten. Ausgestattet mit einem 3D-Szenen-Manager, Objekt-Hirarchie mit parenting und vererbter Transformation, Shader-Manager mit Unterstützung für verschiedene Arten an Lichtquellen, UI-Canvas, Ressourcen-Manager, Skyboxen, Objektbasierte Kameras , etc..",
+        "date": "2024-08-20T14:24:59Z",
+        "languages": [
+            {
+                "name": "C#",
+                "percentage": "93.0%"
+            },
+            {
+                "name": "GLSL",
+                "percentage": "7.0%"
+            }
+        ]
+    },
+    {
+        "source": "https://github.com/inkaudofalk/LORENZCRAFT",
+        "title": "LORENZCRAFT",
+        "description": "Minecraft Clone aus meiner Mittelstufenzeit. Der Spieler ist in der Lage, eine computergenerierte Blocklandschaft in der First-Person zu erkunden und diese durch Zerstören und Platzieren von Blöcken zu verändern. ",
+        "date": "2025-09-29T15:49:19Z",
+        "languages": [
+            {
+                "name": "Processing",
+                "percentage": "100.0%"
+            }
+        ]
+    }
+]
