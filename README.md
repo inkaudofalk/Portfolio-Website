@@ -1,1 +1,1 @@
-Portfolio in Arbeit.
+Frontend-Only Portfolio Web-App gebaut mit React und Vite. Statische Vorverarbeitung mittels build-time API-calls sichert schnelle und uneingeschränkte Verfügbarkeit von Github-Projektinformationen auch ohne Backend. Moderne grafische Gestaltung wird mittels Tailwind, Lucide React und Framer Motion erzielt. Das Projekt ist Übersichtlich gestaltet und bleibt somit erweiterbar und zukunftssicher.
