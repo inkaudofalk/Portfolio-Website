@@ -66,6 +66,14 @@ const Portfolio = () => {
 
       <ProjectListSection projects={projects} />
 
+      <ArticleSection title="Hinweis" className="text-center text-sm opacity-50">
+        Diese Portfolio-Website ist ein andauerndes Projekt und noch in Arbeit.
+        <br />
+        Die hier gezeigten Projekte sind nur ein kleiner Ausschnitt meiner Arbeit über die Jahre.
+        <br />
+        Weitere Projekte werden in Kürze folgen.
+      </ArticleSection>
+
       <FooterSection />
     </div>
   );

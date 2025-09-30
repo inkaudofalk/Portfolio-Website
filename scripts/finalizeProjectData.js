@@ -51,9 +51,19 @@ const finalizeProjectData = async () => {
                 // readme / details
                 if (!finalData.details) {
                     const readmeRes = await fetch(repoUrl + "/readme");
+                    const readmeData = await readmeRes.json();
                     if (readmeRes.ok) {
-                        const readmeData = await readmeRes.json();
-                        finalData.details = atob(readmeData.content);
+                        // decode base64
+                        const byteCharacters = atob(readmeData.content); 
+                        // get raw data
+                        const byteNumbers = new Array(byteCharacters.length);
+                        for (let i = 0; i < byteCharacters.length; i++) {
+                            byteNumbers[i] = byteCharacters.charCodeAt(i);
+                        }
+                        const byteArray = new Uint8Array(byteNumbers);
+                        // decode to utf-8 (supports special characters)
+                        const decoder = new TextDecoder("utf-8");
+                        finalData.details = decoder.decode(byteArray);
                     }
                     else {
                         console.error(`Failed to fetch readme for ${project.source}: ${readmeRes.statusText}`);

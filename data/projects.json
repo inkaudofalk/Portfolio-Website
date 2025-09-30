@@ -1,6 +1,7 @@
 [
     {
         "source": "https://github.com/inkaudofalk/my-portfolio-website",
+        "image": "https://repository-images.githubusercontent.com/1064880708/d8bbb30d-0235-4557-ae98-73fafd16557b",
         "title": "Diese Portfolio Website"
     },
     {
@@ -9,6 +10,8 @@
       "details": "Gebaut als Konsolen-App. Fenster und Low-Level Grafik-Bibliothek über OpenTk (OpenGL4 Wrapper für C#), Bildimport über StbImageSharp und Import von Schriftaren über StbTrueTypeSharp. Nativer Import von 3D-Meshes über eigenes Dateiformat."
     },
     {
-        "source": "https://github.com/inkaudofalk/LORENZCRAFT"
+        "source": "https://github.com/inkaudofalk/LORENZCRAFT",
+        "image": "https://repository-images.githubusercontent.com/1066524975/91f18532-a292-4db3-9b53-a9af8b55b72c",
+        "date": "2022-12-03"
     }
 ]

@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "finalize-project-data": "node scripts/finalizeProjectData.js",
-    "dev": "vite",
-    "build": "npm run finalize-project-data && tsc -b && vite build",
+    "dev": "npm run finalize-project-data && vite",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",

@@ -7,7 +7,7 @@ export const FooterSection : React.FC = () => {
     const [contactClicks, setContactClicks] = useState(0);
 
     return (
-        <footer className="mt-20">
+        <footer className="mt-40">
             <p className="animate-bounce text-sm opacity-50 text-center font-light">
                 {contactClicks === 0 ? "(°o°) { danke fürs lesen}" 
                 : contactClicks === 1 ? "/(°c°)\\ ? { ei was ist dein geheimnis}" 

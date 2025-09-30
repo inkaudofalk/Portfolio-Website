@@ -1,6 +1,7 @@
 [
     {
         "source": "https://github.com/inkaudofalk/my-portfolio-website",
+        "image": "https://repository-images.githubusercontent.com/1064880708/d8bbb30d-0235-4557-ae98-73fafd16557b",
         "title": "Diese Portfolio Website",
         "description": "Übersichtliches und modernes Portfolio, das meine Interesse an den Feldern der Informatik zeigt und einige Projekte präsentiert.",
         "date": "2025-09-26T17:41:55Z",
@@ -15,14 +16,14 @@
             },
             {
                 "name": "HTML",
-                "percentage": "1.8%"
+                "percentage": "1.9%"
             },
             {
                 "name": "CSS",
                 "percentage": "0.4%"
             }
         ],
-        "details": "Frontend-Only Portfolio Web-App gebaut mit React und Vite. Statische Vorverarbeitung mittels build-time API-calls sichert schnelle und uneingeschrÃ¤nkte VerfÃ¼gbarkeit von Github-Projektinformationen auch ohne Backend. Moderne grafische Gestaltung wird mittels Tailwind, Lucide React und Framer Motion erzielt. Das Projekt ist Ãbersichtlich gestaltet und bleibt somit erweiterbar und zukunftssicher."
+        "details": "Frontend-Only Portfolio Web-App gebaut mit React und Vite. Statische Vorverarbeitung mittels build-time API-calls sichert schnelle und uneingeschränkte Verfügbarkeit von Github-Projektinformationen auch ohne Backend. Moderne grafische Gestaltung wird mittels Tailwind, Lucide React und Framer Motion erzielt. Das Projekt ist Übersichtlich gestaltet und bleibt somit erweiterbar und zukunftssicher."
     },
     {
         "source": "https://github.com/inkaudofalk/Trigraphic-GameEngineV1",
@@ -44,14 +45,16 @@
     },
     {
         "source": "https://github.com/inkaudofalk/LORENZCRAFT",
+        "image": "https://repository-images.githubusercontent.com/1066524975/91f18532-a292-4db3-9b53-a9af8b55b72c",
+        "date": "2022-12-03",
         "title": "LORENZCRAFT",
         "description": "Minecraft Clone aus meiner Mittelstufenzeit. Der Spieler ist in der Lage, eine computergenerierte Blocklandschaft in der First-Person zu erkunden und diese durch Zerstören und Platzieren von Blöcken zu verändern. ",
-        "date": "2025-09-29T15:49:19Z",
         "languages": [
             {
                 "name": "Processing",
                 "percentage": "100.0%"
             }
-        ]
+        ],
+        "details": "Die 3D-Welt wird mit Hilfe von Perlin-Noise anhand mehrerer Seeds prozedural generiert, wodurch eine dynamische Landschaft mit natürlich wirkender Topographie entsteht.\nDie generierte Welt ist in mehrere \"Chunks\" a 16*16*265 Blöcken aufgeteilt. Für jeden Chunk wird ein optimiertes 3D-Modell generiert, das nur die sichtbaren Blockseiten einberechnet. Dabei werden für jeden Chunk zwei seperate Meshes für transparente und solide Geometrie erstellt und seperat gerendert um (teil-)transparente Blöcke logisch darstellen zu können.\nDer Spieler interagiert physikaisch mit der Welt über ein maßgeschneidertes, gitterbasiertes Kollisionssystem, um unabhängig von FPS und Geschwindigkeit konsequente Funktion zu gewährleisten und \"Clipping\" zu verhindern.\n "
     }
 ]
