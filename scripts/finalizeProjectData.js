@@ -72,4 +72,4 @@ const finalizeProjectData = async () => {
     console.log("Fetched and saved merged project data.");
 };
 
-fetchRepos();
+finalizeProjectData();
